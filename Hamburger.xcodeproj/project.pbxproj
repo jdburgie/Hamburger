@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58413D551A2E4BDD0012B66A /* HamburgerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58413D541A2E4BDD0012B66A /* HamburgerViewController.m */; };
+		58413D581A2E4BE70012B66A /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58413D571A2E4BE70012B66A /* ListViewController.m */; };
+		58413D5B1A2E4BF40012B66A /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58413D5A1A2E4BF40012B66A /* PictureViewController.m */; };
+		58413D5D1A2E52FB0012B66A /* beer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58413D5C1A2E52FB0012B66A /* beer.jpg */; };
 		58E00C861A2E1E0A00B05B72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E00C851A2E1E0A00B05B72 /* main.m */; };
 		58E00C891A2E1E0A00B05B72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E00C881A2E1E0A00B05B72 /* AppDelegate.m */; };
-		58E00C8C1A2E1E0A00B05B72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E00C8B1A2E1E0A00B05B72 /* ViewController.m */; };
 		58E00C8F1A2E1E0A00B05B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58E00C8D1A2E1E0A00B05B72 /* Main.storyboard */; };
 		58E00C911A2E1E0A00B05B72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58E00C901A2E1E0A00B05B72 /* Images.xcassets */; };
 		58E00C941A2E1E0A00B05B72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58E00C921A2E1E0A00B05B72 /* LaunchScreen.xib */; };
@@ -27,13 +30,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58413D531A2E4BDD0012B66A /* HamburgerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamburgerViewController.h; sourceTree = "<group>"; };
+		58413D541A2E4BDD0012B66A /* HamburgerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamburgerViewController.m; sourceTree = "<group>"; };
+		58413D561A2E4BE70012B66A /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		58413D571A2E4BE70012B66A /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		58413D591A2E4BF40012B66A /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
+		58413D5A1A2E4BF40012B66A /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
+		58413D5C1A2E52FB0012B66A /* beer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer.jpg; sourceTree = "<group>"; };
 		58E00C801A2E1E0A00B05B72 /* Hamburger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamburger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E00C841A2E1E0A00B05B72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58E00C851A2E1E0A00B05B72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58E00C871A2E1E0A00B05B72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58E00C881A2E1E0A00B05B72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		58E00C8A1A2E1E0A00B05B72 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		58E00C8B1A2E1E0A00B05B72 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		58E00C8E1A2E1E0A00B05B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58E00C901A2E1E0A00B05B72 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58E00C931A2E1E0A00B05B72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,11 +91,16 @@
 			children = (
 				58E00C871A2E1E0A00B05B72 /* AppDelegate.h */,
 				58E00C881A2E1E0A00B05B72 /* AppDelegate.m */,
-				58E00C8A1A2E1E0A00B05B72 /* ViewController.h */,
-				58E00C8B1A2E1E0A00B05B72 /* ViewController.m */,
 				58E00C8D1A2E1E0A00B05B72 /* Main.storyboard */,
+				58413D531A2E4BDD0012B66A /* HamburgerViewController.h */,
+				58413D541A2E4BDD0012B66A /* HamburgerViewController.m */,
+				58413D561A2E4BE70012B66A /* ListViewController.h */,
+				58413D571A2E4BE70012B66A /* ListViewController.m */,
+				58413D591A2E4BF40012B66A /* PictureViewController.h */,
+				58413D5A1A2E4BF40012B66A /* PictureViewController.m */,
 				58E00C901A2E1E0A00B05B72 /* Images.xcassets */,
 				58E00C921A2E1E0A00B05B72 /* LaunchScreen.xib */,
+				58413D5C1A2E52FB0012B66A /* beer.jpg */,
 				58E00C831A2E1E0A00B05B72 /* Supporting Files */,
 			);
 			path = Hamburger;
@@ -202,6 +215,7 @@
 				58E00C8F1A2E1E0A00B05B72 /* Main.storyboard in Resources */,
 				58E00C941A2E1E0A00B05B72 /* LaunchScreen.xib in Resources */,
 				58E00C911A2E1E0A00B05B72 /* Images.xcassets in Resources */,
+				58413D5D1A2E52FB0012B66A /* beer.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58E00C8C1A2E1E0A00B05B72 /* ViewController.m in Sources */,
+				58413D581A2E4BE70012B66A /* ListViewController.m in Sources */,
+				58413D5B1A2E4BF40012B66A /* PictureViewController.m in Sources */,
+				58413D551A2E4BDD0012B66A /* HamburgerViewController.m in Sources */,
 				58E00C891A2E1E0A00B05B72 /* AppDelegate.m in Sources */,
 				58E00C861A2E1E0A00B05B72 /* main.m in Sources */,
 			);
