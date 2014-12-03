@@ -10,8 +10,6 @@
 
 @interface PictureViewController ()
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
-
 @end
 
 @implementation PictureViewController

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HamburgerViewController : UIViewController <UIContentContainer>
+@interface HamburgerViewController : UIViewController
 
 @end

@@ -85,9 +85,6 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="imageView" destination="MLP-qA-qEd" id="LCj-5w-ogV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYI-An-iRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

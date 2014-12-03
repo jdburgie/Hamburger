@@ -10,7 +10,6 @@
 
 @interface ListViewController ()
 
-
 @end
 
 @implementation ListViewController
@@ -29,7 +28,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"myIdent"];
-
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"myIdent"];
     
     cell.textLabel.text = @"Hello!";
