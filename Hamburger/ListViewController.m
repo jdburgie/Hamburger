@@ -28,12 +28,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"myIdent"];
-    
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"myIdent"];
+
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"myIdent"];
     
     cell.textLabel.text = @"Hello!";
     
