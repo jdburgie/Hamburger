@@ -18,9 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.view setBackgroundColor:[UIColor lightGrayColor]];
-    self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"beer"]];
 }
 
 - (void)didReceiveMemoryWarning {

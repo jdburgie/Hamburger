@@ -25,9 +25,10 @@
     [super viewDidLoad];
     
     self.isRight = NO;
+    UIStoryboard *storyboard = [self storyboard];
     
-    self.backViewController = [[ListViewController alloc] init];
-    self.frontViewController = [[PictureViewController alloc] init];
+    self.backViewController = [storyboard instantiateViewControllerWithIdentifier:@"ListVC"];
+    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:@"PictureVC"];
 
     [self addChildViewController:self.backViewController];
     self.backViewController.view.frame = self.view.frame;

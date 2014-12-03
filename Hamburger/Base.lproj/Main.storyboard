@@ -38,7 +38,7 @@
         <!--List View Controller-->
         <scene sceneID="5wU-Az-UbP">
             <objects>
-                <tableViewController id="JPv-Ef-1LL" customClass="ListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JPv-Ef-1LL" customClass="ListViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="TWh-FX-eTA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
         <!--Picture View Controller-->
         <scene sceneID="llc-L6-gOK">
             <objects>
-                <viewController id="HUN-Zg-IvX" customClass="PictureViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PictureVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HUN-Zg-IvX" customClass="PictureViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yc0-ey-mJ9"/>
                         <viewControllerLayoutGuide type="bottom" id="naH-dA-dRc"/>
