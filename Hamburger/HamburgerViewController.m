@@ -40,6 +40,7 @@
 }
 
 - (IBAction)tappedHamburger:(id)sender {
+
     [UIView animateWithDuration:1.0f
                           delay:0.01f
          usingSpringWithDamping:0.6f
@@ -55,9 +56,9 @@
                          }
                          self.frontViewController.view.frame = frame;
                      }
-                     completion:^(BOOL finished) {
-                         self.isRight = !self.isRight;
-                     }];
+                     completion:^(BOOL finished) { }];
+
+    self.isRight = !self.isRight;
 }
 
 @end
