@@ -39,14 +39,9 @@
     [self.frontViewController didMoveToParentViewController:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-
-}
-
 - (IBAction)tappedHamburger:(id)sender {
     [UIView animateWithDuration:1.0f
-                          delay:0.1f
+                          delay:0.01f
          usingSpringWithDamping:0.6f
           initialSpringVelocity:0.0f
                         options:UIViewAnimationOptionCurveEaseInOut
@@ -56,7 +51,7 @@
                          if (self.isRight) {
                              frame.origin.x = 0.0f;
                          } else {
-                             frame.origin.x = 300.0f;
+                             frame.origin.x = frame.size.width * 0.9f;
                          }
                          self.frontViewController.view.frame = frame;
                      }
