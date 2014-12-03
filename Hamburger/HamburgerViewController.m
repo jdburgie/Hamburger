@@ -7,8 +7,6 @@
 //
 
 #import "HamburgerViewController.h"
-#import "PictureViewController.h"
-#import "ListViewController.h"
 
 @interface HamburgerViewController ()
 
@@ -47,23 +45,24 @@
 }
 
 - (IBAction)tappedHamburger:(id)sender {
-    CGRect f = self.view.frame;
-    
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:0.5f];
-    [UIView setAnimationDelay:0.1f];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    
-    if (self.isRight) {
-        f.origin.x = 0.0f;
-    } else {
-        f.origin.x = 300.0f;
-    }
-    self.frontViewController.view.frame = f;
-
-    [UIView commitAnimations];
-    
-    self.isRight = !self.isRight;
+    [UIView animateWithDuration:1.0f
+                          delay:0.1f
+         usingSpringWithDamping:0.6f
+          initialSpringVelocity:0.0f
+                        options:UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         CGRect frame = self.view.frame;
+                         
+                         if (self.isRight) {
+                             frame.origin.x = 0.0f;
+                         } else {
+                             frame.origin.x = 300.0f;
+                         }
+                         self.frontViewController.view.frame = frame;
+                     }
+                     completion:^(BOOL finished) {
+                         self.isRight = !self.isRight;
+                     }];
 }
 
 /*
