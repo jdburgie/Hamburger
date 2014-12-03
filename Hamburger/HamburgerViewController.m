@@ -12,8 +12,8 @@
 
 @interface HamburgerViewController ()
 
-@property (strong, nonatomic) IBOutlet ListViewController *backViewController;
-@property (strong, nonatomic) IBOutlet PictureViewController *frontViewController;
+@property (strong, nonatomic) UIViewController *backViewController;
+@property (strong, nonatomic) UIViewController *frontViewController;
 
 @property (assign, nonatomic) BOOL isRight;
 
