@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListViewController.h"
 
-@interface HamburgerViewController : UIViewController
+@protocol ShowHideHamburgerSideView;
+
+@interface HamburgerViewController : UIViewController <ShowHideHamburgerSideView>
 
 @end
+

@@ -61,6 +61,80 @@
             </objects>
             <point key="canvasLocation" x="1179" y="1704"/>
         </scene>
+        <!--Fizz View Controller-->
+        <scene sceneID="i1n-CD-bYt">
+            <objects>
+                <viewController storyboardIdentifier="FizzVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eqa-Dn-k5A" customClass="FizzViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m8V-xg-0jA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zsx-yg-0gl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fUK-Al-aE3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a number ≤ 20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-ol-GP3">
+                                <rect key="frame" x="121" y="32" width="157" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Amo-cx-EoM"/>
+                                    <constraint firstAttribute="width" constant="157" id="MJF-d4-eFU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXg-gf-xEE">
+                                <rect key="frame" x="16" y="66" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="Q8F-UM-MFQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="vvj-js-fpT"/>
+                                </constraints>
+                                <state key="normal" title="Run it or drink!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedRunIt:" destination="eqa-Dn-k5A" eventType="touchUpInside" id="B0Z-QI-BJV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eSx-2j-c7U">
+                                <rect key="frame" x="16" y="28" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="0iD-Az-eXB"/>
+                                    <constraint firstAttribute="height" constant="30" id="oTL-eu-khZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4g-0O-guL">
+                                <rect key="frame" x="16" y="104" width="568" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m8Y-ol-GP3" firstAttribute="leading" secondItem="eSx-2j-c7U" secondAttribute="trailing" constant="8" id="0Dv-Xb-E7a"/>
+                            <constraint firstItem="w4g-0O-guL" firstAttribute="top" secondItem="kXg-gf-xEE" secondAttribute="bottom" constant="8" id="5AG-Vj-OtU"/>
+                            <constraint firstItem="w4g-0O-guL" firstAttribute="leading" secondItem="fUK-Al-aE3" secondAttribute="leadingMargin" id="5gt-IF-qoc"/>
+                            <constraint firstItem="kXg-gf-xEE" firstAttribute="leading" secondItem="fUK-Al-aE3" secondAttribute="leadingMargin" id="Ct2-wo-hLv"/>
+                            <constraint firstItem="Zsx-yg-0gl" firstAttribute="top" secondItem="w4g-0O-guL" secondAttribute="bottom" constant="20" id="RD8-Ez-sqr"/>
+                            <constraint firstItem="w4g-0O-guL" firstAttribute="trailing" secondItem="fUK-Al-aE3" secondAttribute="trailingMargin" id="XCH-EJ-vkY"/>
+                            <constraint firstItem="eSx-2j-c7U" firstAttribute="leading" secondItem="fUK-Al-aE3" secondAttribute="leadingMargin" id="Ymc-xD-EzQ"/>
+                            <constraint firstItem="eSx-2j-c7U" firstAttribute="top" secondItem="m8V-xg-0jA" secondAttribute="bottom" constant="8" id="lcG-9a-uE6"/>
+                            <constraint firstItem="eSx-2j-c7U" firstAttribute="centerY" secondItem="m8Y-ol-GP3" secondAttribute="centerY" constant="0.5" id="qlv-kb-wLV"/>
+                            <constraint firstItem="kXg-gf-xEE" firstAttribute="top" secondItem="eSx-2j-c7U" secondAttribute="bottom" constant="8" id="rGy-lA-Dld"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressText" destination="w4g-0O-guL" id="CTJ-0a-nxY"/>
+                        <outlet property="theNumber" destination="eSx-2j-c7U" id="0CC-cn-aOy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8C-Qd-e0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="1704"/>
+        </scene>
         <!--Picture View Controller-->
         <scene sceneID="llc-L6-gOK">
             <objects>

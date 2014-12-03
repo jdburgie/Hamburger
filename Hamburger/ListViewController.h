@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ShowHideHamburgerSideView;
+
 @interface ListViewController : UITableViewController
+
+@property (weak, nonatomic) id<ShowHideHamburgerSideView> delegate;
+
+@end
+
+@protocol ShowHideHamburgerSideView <NSObject>
+
+- (void)hamburgerShowHideSideView;
+- (void)hamburgerLoadPictureVC;
+- (void)hamburgerLoadFizzVC;
 
 @end
