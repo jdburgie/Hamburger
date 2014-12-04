@@ -17,14 +17,20 @@
 
 @implementation ListViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+- (void)viewDidLoad {    
     self.rowLabels = @[@"Pictures", @"Fizz Buzz"];
     self.vcNames = @[@"PictureVC", @"FizzVC"];
 }
 
-#pragma mark - UITableViewController delegate methods
+#pragma mark - Private methods
+
+- (void)listLoadVC: (NSString *)vcName {
+    if ([self.delegate respondsToSelector:@selector(loadVC:)]) {
+        [self.delegate loadVC:vcName];
+    }
+}
+
+#pragma mark - UITableViewController data source methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -41,11 +47,7 @@
     return cell;
 }
 
-- (void)listLoadVC: (NSString *)vcName {
-    if ([self.delegate respondsToSelector:@selector(loadVC:)]) {
-        [self.delegate loadVC:vcName];
-    }
-}
+#pragma mark - UITableViewController delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
