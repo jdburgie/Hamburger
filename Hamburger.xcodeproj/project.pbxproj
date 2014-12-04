@@ -15,6 +15,15 @@
 		58413D581A2E4BE70012B66A /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58413D571A2E4BE70012B66A /* ListViewController.m */; };
 		58413D5B1A2E4BF40012B66A /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58413D5A1A2E4BF40012B66A /* PictureViewController.m */; };
 		58413D5D1A2E52FB0012B66A /* beer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 58413D5C1A2E52FB0012B66A /* beer.jpg */; };
+		588E8EE31A30553B00A426A2 /* default60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EDA1A30553B00A426A2 /* default60@3x.png */; };
+		588E8EE41A30553B00A426A2 /* default29.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EDB1A30553B00A426A2 /* default29.png */; };
+		588E8EE51A30553B00A426A2 /* default29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EDC1A30553B00A426A2 /* default29@2x.png */; };
+		588E8EE61A30553B00A426A2 /* default40.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EDD1A30553B00A426A2 /* default40.png */; };
+		588E8EE71A30553B00A426A2 /* default40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EDE1A30553B00A426A2 /* default40@2x.png */; };
+		588E8EE81A30553B00A426A2 /* default60.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EDF1A30553B00A426A2 /* default60.png */; };
+		588E8EE91A30553B00A426A2 /* default76.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EE01A30553B00A426A2 /* default76.png */; };
+		588E8EEA1A30553B00A426A2 /* default60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EE11A30553B00A426A2 /* default60@2x.png */; };
+		588E8EEB1A30553B00A426A2 /* default76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 588E8EE21A30553B00A426A2 /* default76@2x.png */; };
 		58D1060F1A2F841000DCF6B2 /* FizzViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D1060E1A2F841000DCF6B2 /* FizzViewController.m */; };
 		58E00C861A2E1E0A00B05B72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E00C851A2E1E0A00B05B72 /* main.m */; };
 		58E00C891A2E1E0A00B05B72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E00C881A2E1E0A00B05B72 /* AppDelegate.m */; };
@@ -46,6 +55,15 @@
 		58413D591A2E4BF40012B66A /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
 		58413D5A1A2E4BF40012B66A /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
 		58413D5C1A2E52FB0012B66A /* beer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beer.jpg; sourceTree = "<group>"; };
+		588E8EDA1A30553B00A426A2 /* default60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default60@3x.png"; sourceTree = "<group>"; };
+		588E8EDB1A30553B00A426A2 /* default29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default29.png; sourceTree = "<group>"; };
+		588E8EDC1A30553B00A426A2 /* default29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default29@2x.png"; sourceTree = "<group>"; };
+		588E8EDD1A30553B00A426A2 /* default40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default40.png; sourceTree = "<group>"; };
+		588E8EDE1A30553B00A426A2 /* default40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default40@2x.png"; sourceTree = "<group>"; };
+		588E8EDF1A30553B00A426A2 /* default60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default60.png; sourceTree = "<group>"; };
+		588E8EE01A30553B00A426A2 /* default76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default76.png; sourceTree = "<group>"; };
+		588E8EE11A30553B00A426A2 /* default60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default60@2x.png"; sourceTree = "<group>"; };
+		588E8EE21A30553B00A426A2 /* default76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default76@2x.png"; sourceTree = "<group>"; };
 		58D1060D1A2F841000DCF6B2 /* FizzViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FizzViewController.h; sourceTree = "<group>"; };
 		58D1060E1A2F841000DCF6B2 /* FizzViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FizzViewController.m; sourceTree = "<group>"; };
 		58E00C801A2E1E0A00B05B72 /* Hamburger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamburger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,22 +120,31 @@
 			children = (
 				58E00C871A2E1E0A00B05B72 /* AppDelegate.h */,
 				58E00C881A2E1E0A00B05B72 /* AppDelegate.m */,
-				58E00C8D1A2E1E0A00B05B72 /* Main.storyboard */,
+				58413D5C1A2E52FB0012B66A /* beer.jpg */,
+				588E8EDB1A30553B00A426A2 /* default29.png */,
+				588E8EDC1A30553B00A426A2 /* default29@2x.png */,
+				588E8EDD1A30553B00A426A2 /* default40.png */,
+				588E8EDE1A30553B00A426A2 /* default40@2x.png */,
+				588E8EDF1A30553B00A426A2 /* default60.png */,
+				588E8EE11A30553B00A426A2 /* default60@2x.png */,
+				588E8EDA1A30553B00A426A2 /* default60@3x.png */,
+				588E8EE01A30553B00A426A2 /* default76.png */,
+				588E8EE21A30553B00A426A2 /* default76@2x.png */,
 				58D1060D1A2F841000DCF6B2 /* FizzViewController.h */,
 				58D1060E1A2F841000DCF6B2 /* FizzViewController.m */,
+				5813857C1A30487100195716 /* hamburger.png */,
+				5813857B1A30487100195716 /* hamburger@2x.png */,
+				581385801A304B8D00195716 /* hamburger2.png */,
+				5813857F1A304B8D00195716 /* hamburger2@2x.png */,
 				58413D531A2E4BDD0012B66A /* HamburgerViewController.h */,
 				58413D541A2E4BDD0012B66A /* HamburgerViewController.m */,
-				58413D561A2E4BE70012B66A /* ListViewController.h */,
-				58413D571A2E4BE70012B66A /* ListViewController.m */,
-				58413D591A2E4BF40012B66A /* PictureViewController.h */,
-				58413D5A1A2E4BF40012B66A /* PictureViewController.m */,
 				58E00C901A2E1E0A00B05B72 /* Images.xcassets */,
 				58E00C921A2E1E0A00B05B72 /* LaunchScreen.xib */,
-				58413D5C1A2E52FB0012B66A /* beer.jpg */,
-				5813857B1A30487100195716 /* hamburger@2x.png */,
-				5813857C1A30487100195716 /* hamburger.png */,
-				5813857F1A304B8D00195716 /* hamburger2@2x.png */,
-				581385801A304B8D00195716 /* hamburger2.png */,
+				58413D561A2E4BE70012B66A /* ListViewController.h */,
+				58413D571A2E4BE70012B66A /* ListViewController.m */,
+				58E00C8D1A2E1E0A00B05B72 /* Main.storyboard */,
+				58413D591A2E4BF40012B66A /* PictureViewController.h */,
+				58413D5A1A2E4BF40012B66A /* PictureViewController.m */,
 				58E00C831A2E1E0A00B05B72 /* Supporting Files */,
 			);
 			path = Hamburger;
@@ -229,14 +256,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				588E8EE51A30553B00A426A2 /* default29@2x.png in Resources */,
+				588E8EE31A30553B00A426A2 /* default60@3x.png in Resources */,
 				581385821A304B8D00195716 /* hamburger2.png in Resources */,
 				58E00C8F1A2E1E0A00B05B72 /* Main.storyboard in Resources */,
 				5813857E1A30487100195716 /* hamburger.png in Resources */,
+				588E8EE61A30553B00A426A2 /* default40.png in Resources */,
+				588E8EE71A30553B00A426A2 /* default40@2x.png in Resources */,
 				5813857D1A30487100195716 /* hamburger@2x.png in Resources */,
+				588E8EEB1A30553B00A426A2 /* default76@2x.png in Resources */,
+				588E8EEA1A30553B00A426A2 /* default60@2x.png in Resources */,
 				581385811A304B8D00195716 /* hamburger2@2x.png in Resources */,
+				588E8EE81A30553B00A426A2 /* default60.png in Resources */,
 				58E00C941A2E1E0A00B05B72 /* LaunchScreen.xib in Resources */,
 				58E00C911A2E1E0A00B05B72 /* Images.xcassets in Resources */,
+				588E8EE41A30553B00A426A2 /* default29.png in Resources */,
 				58413D5D1A2E52FB0012B66A /* beer.jpg in Resources */,
+				588E8EE91A30553B00A426A2 /* default76.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +418,8 @@
 		58E00CA41A2E1E0A00B05B72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Hamburger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,7 +429,8 @@
 		58E00CA51A2E1E0A00B05B72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Hamburger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
