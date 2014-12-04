@@ -18,6 +18,7 @@
 @implementation ListViewController
 
 - (void)viewDidLoad {
+    self.hamburgerViewController = (HamburgerViewController *)self.parentViewController;
 
     self.rowLabels = @[@"Pictures", @"Fizz Buzz"];
     self.vcNames = @[@"PictureVC", @"FizzVC"];
