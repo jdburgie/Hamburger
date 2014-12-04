@@ -24,15 +24,15 @@
     [super viewDidLoad];
     
     self.isRight = NO;
+    
     UIStoryboard *storyboard = [self storyboard];
     
     self.backViewController = [storyboard instantiateViewControllerWithIdentifier:@"ListVC"];
+    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:@"PictureVC"];
+    
     [(ListViewController *)self.backViewController setDelegate:self];
     
-    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:@"PictureVC"];
-
     [self addChildVC:self.backViewController withFrame:self.view.frame];
-
     [self addChildVC:self.frontViewController withFrame:self.view.frame];
 }
 
@@ -57,36 +57,28 @@
     [self addChildVC:newVC withFrame:frame];
 }
 
-- (void)hamburgerLoadPictureVC {
+- (void)loadVC:(NSString *)name {
     UIStoryboard *storyboard = [self storyboard];
     
-    [UIView animateWithDuration:0.0f
-                          delay:0.0f
-                        options:UIViewAnimationOptionTransitionNone
+    [UIView animateWithDuration:0.25f
                      animations:^{
-                         [self swapFrontChildVC:self.frontViewController replaceWith:[storyboard instantiateViewControllerWithIdentifier:@"PictureVC"]];
+                         CGRect frame = self.frontViewController.view.frame;
+                         // Move frontViewController view off the screen to the right
+                         frame.origin.x = self.view.frame.size.width;
+                         self.frontViewController.view.frame = frame;
                      }
-                     completion:nil
+                     completion:^(BOOL finished){
+                         [self swapFrontChildVC:self.frontViewController replaceWith:[storyboard instantiateViewControllerWithIdentifier:name]];
+                          [self showHideSideView];
+                     }
      ];
+
 }
 
-- (void)hamburgerLoadFizzVC {
-    UIStoryboard *storyboard = [self storyboard];
-    
-    [UIView animateWithDuration:0.0f
-                          delay:0.0f
-                        options:UIViewAnimationOptionTransitionNone
-                     animations:^{
-                         [self swapFrontChildVC:self.frontViewController replaceWith:[storyboard instantiateViewControllerWithIdentifier:@"FizzVC"]];
-                     }
-                     completion:nil
-     ];
-}
-
-- (void)hamburgerShowHideSideView {
-    [UIView animateWithDuration:1.0f
+- (void)showHideSideView {
+    [UIView animateWithDuration:0.75f
                           delay:0.01f
-         usingSpringWithDamping:0.6f
+         usingSpringWithDamping:0.75f
           initialSpringVelocity:0.0f
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
@@ -106,8 +98,7 @@
 }
 
 - (IBAction)tappedHamburger:(id)sender {
-
-    [self hamburgerShowHideSideView];
+    [self showHideSideView];
 }
 
 @end

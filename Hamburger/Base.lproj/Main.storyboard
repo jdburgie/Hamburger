@@ -84,14 +84,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXg-gf-xEE">
-                                <rect key="frame" x="16" y="66" width="101" height="30"/>
+                                <rect key="frame" x="16" y="66" width="121" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="101" id="Q8F-UM-MFQ"/>
+                                    <constraint firstAttribute="width" constant="121" id="Q8F-UM-MFQ"/>
                                     <constraint firstAttribute="height" constant="30" id="vvj-js-fpT"/>
                                 </constraints>
-                                <state key="normal" title="Run it or drink!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Run it or drink!"/>
                                 <connections>
                                     <action selector="tappedRunIt:" destination="eqa-Dn-k5A" eventType="touchUpInside" id="B0Z-QI-BJV"/>
                                 </connections>
@@ -112,7 +112,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.45590199999999997" green="0.63612299999999999" blue="0.77347299999999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="m8Y-ol-GP3" firstAttribute="leading" secondItem="eSx-2j-c7U" secondAttribute="trailing" constant="8" id="0Dv-Xb-E7a"/>
                             <constraint firstItem="w4g-0O-guL" firstAttribute="top" secondItem="kXg-gf-xEE" secondAttribute="bottom" constant="8" id="5AG-Vj-OtU"/>

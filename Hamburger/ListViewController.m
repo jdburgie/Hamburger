@@ -11,6 +11,7 @@
 @interface ListViewController ()
 
 @property (strong, nonatomic) NSArray *rowLabels;
+@property (strong, nonatomic) NSArray *vcNames;
 
 @end
 
@@ -19,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.rowLabels = @[@"Pictures", @"Fizz Buzz", @"reserved 3", @"reserved 4", @"reserved 5"];
+    self.rowLabels = @[@"Pictures", @"Fizz Buzz"];
+    self.vcNames = @[@"PictureVC", @"FizzVC"];
 }
 
 #pragma mark - UITableViewController delegate methods
@@ -39,36 +41,15 @@
     return cell;
 }
 
-- (void)listShowHideSideView {
-    if ([self.delegate respondsToSelector:@selector(hamburgerShowHideSideView)]) {
-        [self.delegate hamburgerShowHideSideView];
-    }
-}
-
-- (void)listLoadPictureVC {
-    if ([self.delegate respondsToSelector:@selector(hamburgerLoadPictureVC)]) {
-        [self.delegate hamburgerLoadPictureVC];
-    }
-}
-
-- (void)listLoadFizzVC {
-    if ([self.delegate respondsToSelector:@selector(hamburgerLoadFizzVC)]) {
-        [self.delegate hamburgerLoadFizzVC];
+- (void)listLoadVC: (NSString *)vcName {
+    if ([self.delegate respondsToSelector:@selector(loadVC:)]) {
+        [self.delegate loadVC:vcName];
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
-    
-    if ([self.rowLabels[row] isEqualToString:@"Pictures"]) {
-        [self listLoadPictureVC];
-    }
-    
-    if ([self.rowLabels[row] isEqualToString:@"Fizz Buzz"]) {
-        [self listLoadFizzVC];
-    }
-
-    [self listShowHideSideView];
+    [self listLoadVC:self.vcNames[row]];
 }
 
 @end

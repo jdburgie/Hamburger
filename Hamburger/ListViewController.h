@@ -18,8 +18,6 @@
 
 @protocol ShowHideHamburgerSideView <NSObject>
 
-- (void)hamburgerShowHideSideView;
-- (void)hamburgerLoadPictureVC;
-- (void)hamburgerLoadFizzVC;
+- (void)loadVC: (NSString *)vcName;
 
 @end
