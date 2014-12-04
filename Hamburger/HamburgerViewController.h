@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ListViewController.h"
 
-@protocol ShowHideHamburgerSideView;
+@interface HamburgerViewController : UIViewController
 
-@interface HamburgerViewController : UIViewController <ShowHideHamburgerSideView>
+@property (strong, nonatomic) UIViewController *backViewController;
+@property (strong, nonatomic) UIViewController *frontViewController;
+
+- (void)presentFrontViewController:(UIViewController *)frontViewController;
 
 @end
 

@@ -21,7 +21,7 @@
     [super viewDidLoad];
 }
 
-- (void)fizzBuzzFactorial: (NSInteger)number {
+- (void)fizzBuzzFactorial:(NSInteger)number {
     NSInteger i;
     
     for (i = 1; i <= number; i++)
@@ -72,7 +72,7 @@
         }
 }
 
-- (NSInteger)recurseFactorial: (NSInteger)number {
+- (NSInteger)recurseFactorial:(NSInteger)number {
     if (number == 0 || number == 1)
         {
         return 1;

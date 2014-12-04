@@ -17,20 +17,13 @@
 
 @implementation ListViewController
 
-- (void)viewDidLoad {    
+- (void)viewDidLoad {
+
     self.rowLabels = @[@"Pictures", @"Fizz Buzz"];
     self.vcNames = @[@"PictureVC", @"FizzVC"];
 }
 
-#pragma mark - Private methods
-
-- (void)listLoadVC: (NSString *)vcName {
-    if ([self.delegate respondsToSelector:@selector(loadVC:)]) {
-        [self.delegate loadVC:vcName];
-    }
-}
-
-#pragma mark - UITableViewController data source methods
+#pragma mark - UITableViewController
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -47,11 +40,13 @@
     return cell;
 }
 
-#pragma mark - UITableViewController delegate methods
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
-    [self listLoadVC:self.vcNames[row]];
+    
+    UIStoryboard *storyboard = [self storyboard];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:self.vcNames[row]];
+
+    [self.hamburgerViewController presentFrontViewController:viewController];
 }
 
 @end

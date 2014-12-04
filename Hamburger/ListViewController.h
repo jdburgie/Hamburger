@@ -7,17 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol ShowHideHamburgerSideView;
+#import "HamburgerViewController.h"
 
 @interface ListViewController : UITableViewController
 
-@property (weak, nonatomic) id<ShowHideHamburgerSideView> delegate;
-
-@end
-
-@protocol ShowHideHamburgerSideView <NSObject>
-
-- (void)loadVC: (NSString *)vcName;
+@property (weak, nonatomic) HamburgerViewController *hamburgerViewController;
 
 @end
