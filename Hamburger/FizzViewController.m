@@ -37,13 +37,13 @@
         NSString *fizzBuzzMsg;
         if (modThree == 0)
             {
-            fizzBuzzMsg = [NSString stringWithFormat:@"\n%ld - Fizz", (long)i];
+            fizzBuzzMsg = [NSString stringWithFormat:@"%ld - Fizz", (long)i];
             self.progressText.text = [self.progressText.text stringByAppendingString:fizzBuzzMsg];
             isFizzOrBuzz = YES;
             }
         if (modFive == 0)
             {
-            fizzBuzzMsg = [NSString stringWithFormat:@"\n%ld - Buzz", (long)i];
+            fizzBuzzMsg = [NSString stringWithFormat:@"%ld - Buzz", (long)i];
             self.progressText.text = [self.progressText.text stringByAppendingString:fizzBuzzMsg];
             isFizzOrBuzz = YES;
             }
@@ -57,13 +57,13 @@
                 factorialFizzBuzz *= j;
                 }
             NSString *factorialMsg;
-            factorialMsg = [NSString stringWithFormat:@"\n%ld factorial by iteration is %ld", (long)i, (long)factorialFizzBuzz];
+            factorialMsg = [NSString stringWithFormat:@"\n%ld factorial by iteration is %ld\n", (long)i, (long)factorialFizzBuzz];
             
             self.progressText.text = [self.progressText.text stringByAppendingString:factorialMsg];
             
             factorialFizzBuzz = [self recurseFactorial:i];
             
-            factorialMsg = [NSString stringWithFormat:@"\n%ld factorial by recursion is %ld\n", (long)i, (long)factorialFizzBuzz];
+            factorialMsg = [NSString stringWithFormat:@"%ld factorial by recursion is %ld\n\n", (long)i, (long)factorialFizzBuzz];
             
             self.progressText.text = [self.progressText.text stringByAppendingString:factorialMsg];
             
