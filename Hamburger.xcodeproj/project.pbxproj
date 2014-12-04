@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5813857D1A30487100195716 /* hamburger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5813857B1A30487100195716 /* hamburger@2x.png */; };
+		5813857E1A30487100195716 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 5813857C1A30487100195716 /* hamburger.png */; };
+		581385811A304B8D00195716 /* hamburger2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5813857F1A304B8D00195716 /* hamburger2@2x.png */; };
+		581385821A304B8D00195716 /* hamburger2.png in Resources */ = {isa = PBXBuildFile; fileRef = 581385801A304B8D00195716 /* hamburger2.png */; };
 		58413D551A2E4BDD0012B66A /* HamburgerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58413D541A2E4BDD0012B66A /* HamburgerViewController.m */; };
 		58413D581A2E4BE70012B66A /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58413D571A2E4BE70012B66A /* ListViewController.m */; };
 		58413D5B1A2E4BF40012B66A /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58413D5A1A2E4BF40012B66A /* PictureViewController.m */; };
@@ -31,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5813857B1A30487100195716 /* hamburger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger@2x.png"; sourceTree = "<group>"; };
+		5813857C1A30487100195716 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
+		5813857F1A304B8D00195716 /* hamburger2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hamburger2@2x.png"; sourceTree = "<group>"; };
+		581385801A304B8D00195716 /* hamburger2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger2.png; sourceTree = "<group>"; };
 		58413D531A2E4BDD0012B66A /* HamburgerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamburgerViewController.h; sourceTree = "<group>"; };
 		58413D541A2E4BDD0012B66A /* HamburgerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamburgerViewController.m; sourceTree = "<group>"; };
 		58413D561A2E4BE70012B66A /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
@@ -106,6 +114,10 @@
 				58E00C901A2E1E0A00B05B72 /* Images.xcassets */,
 				58E00C921A2E1E0A00B05B72 /* LaunchScreen.xib */,
 				58413D5C1A2E52FB0012B66A /* beer.jpg */,
+				5813857B1A30487100195716 /* hamburger@2x.png */,
+				5813857C1A30487100195716 /* hamburger.png */,
+				5813857F1A304B8D00195716 /* hamburger2@2x.png */,
+				581385801A304B8D00195716 /* hamburger2.png */,
 				58E00C831A2E1E0A00B05B72 /* Supporting Files */,
 			);
 			path = Hamburger;
@@ -217,7 +229,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581385821A304B8D00195716 /* hamburger2.png in Resources */,
 				58E00C8F1A2E1E0A00B05B72 /* Main.storyboard in Resources */,
+				5813857E1A30487100195716 /* hamburger.png in Resources */,
+				5813857D1A30487100195716 /* hamburger@2x.png in Resources */,
+				581385811A304B8D00195716 /* hamburger2@2x.png in Resources */,
 				58E00C941A2E1E0A00B05B72 /* LaunchScreen.xib in Resources */,
 				58E00C911A2E1E0A00B05B72 /* Images.xcassets in Resources */,
 				58413D5D1A2E52FB0012B66A /* beer.jpg in Resources */,

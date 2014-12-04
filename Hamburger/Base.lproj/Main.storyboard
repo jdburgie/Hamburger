@@ -19,7 +19,8 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="l4Y-vz-alF">
-                        <barButtonItem key="leftBarButtonItem" title="Hamburger" id="0jA-CA-kt0">
+                        <barButtonItem key="leftBarButtonItem" image="hamburger.png" style="plain" id="0jA-CA-kt0">
+                            <color key="tintColor" red="0.45590199999999997" green="0.63612299999999999" blue="0.77347299999999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="tappedHamburger:" destination="pPL-hz-r16" id="3cn-1G-EKx"/>
                             </connections>
@@ -185,5 +186,6 @@
     </scenes>
     <resources>
         <image name="beer.jpg" width="204" height="240"/>
+        <image name="hamburger.png" width="32" height="32"/>
     </resources>
 </document>
