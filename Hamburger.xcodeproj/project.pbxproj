@@ -97,6 +97,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		581E30EE1A3173BD00113F1E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				58413D5C1A2E52FB0012B66A /* beer.jpg */,
+				588E8EDB1A30553B00A426A2 /* default29.png */,
+				588E8EDC1A30553B00A426A2 /* default29@2x.png */,
+				588E8EDD1A30553B00A426A2 /* default40.png */,
+				588E8EDE1A30553B00A426A2 /* default40@2x.png */,
+				588E8EDF1A30553B00A426A2 /* default60.png */,
+				588E8EE11A30553B00A426A2 /* default60@2x.png */,
+				588E8EDA1A30553B00A426A2 /* default60@3x.png */,
+				588E8EE01A30553B00A426A2 /* default76.png */,
+				588E8EE21A30553B00A426A2 /* default76@2x.png */,
+				5813857C1A30487100195716 /* hamburger.png */,
+				5813857B1A30487100195716 /* hamburger@2x.png */,
+				581385801A304B8D00195716 /* hamburger2.png */,
+				5813857F1A304B8D00195716 /* hamburger2@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		58E00C771A2E1E0A00B05B72 = {
 			isa = PBXGroup;
 			children = (
@@ -120,24 +141,11 @@
 			children = (
 				58E00C871A2E1E0A00B05B72 /* AppDelegate.h */,
 				58E00C881A2E1E0A00B05B72 /* AppDelegate.m */,
-				58413D5C1A2E52FB0012B66A /* beer.jpg */,
-				588E8EDB1A30553B00A426A2 /* default29.png */,
-				588E8EDC1A30553B00A426A2 /* default29@2x.png */,
-				588E8EDD1A30553B00A426A2 /* default40.png */,
-				588E8EDE1A30553B00A426A2 /* default40@2x.png */,
-				588E8EDF1A30553B00A426A2 /* default60.png */,
-				588E8EE11A30553B00A426A2 /* default60@2x.png */,
-				588E8EDA1A30553B00A426A2 /* default60@3x.png */,
-				588E8EE01A30553B00A426A2 /* default76.png */,
-				588E8EE21A30553B00A426A2 /* default76@2x.png */,
 				58D1060D1A2F841000DCF6B2 /* FizzViewController.h */,
 				58D1060E1A2F841000DCF6B2 /* FizzViewController.m */,
-				5813857C1A30487100195716 /* hamburger.png */,
-				5813857B1A30487100195716 /* hamburger@2x.png */,
-				581385801A304B8D00195716 /* hamburger2.png */,
-				5813857F1A304B8D00195716 /* hamburger2@2x.png */,
 				58413D531A2E4BDD0012B66A /* HamburgerViewController.h */,
 				58413D541A2E4BDD0012B66A /* HamburgerViewController.m */,
+				581E30EE1A3173BD00113F1E /* Images */,
 				58E00C901A2E1E0A00B05B72 /* Images.xcassets */,
 				58E00C921A2E1E0A00B05B72 /* LaunchScreen.xib */,
 				58413D561A2E4BE70012B66A /* ListViewController.h */,

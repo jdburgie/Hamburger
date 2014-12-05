@@ -21,7 +21,7 @@
     self.hamburgerViewController = (HamburgerViewController *)self.parentViewController;
 
     self.rowLabels = @[@"Pictures", @"Fizz Buzz"];
-    self.vcNames = @[@"PictureVC", @"FizzVC"];
+    self.vcNames = @[@"PictureViewController", @"FizzViewController"];
 }
 
 #pragma mark - UITableViewController

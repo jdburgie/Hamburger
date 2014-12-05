@@ -12,6 +12,10 @@
 @interface HamburgerViewController ()
 
 @property (assign, nonatomic) BOOL isRight;
+@property (assign, nonatomic) CGRect vanityFrameInView;
+@property (assign, nonatomic) CGRect vanityFrameOutView;
+
+@property (assign, nonatomic) CGFloat sideViewWidthPercent;
 
 @end
 
@@ -21,14 +25,29 @@
     [super viewDidLoad];
     
     self.isRight = NO;
+    self.sideViewWidthPercent = 0.5f;
     
     UIStoryboard *storyboard = [self storyboard];
     
-    self.backViewController = [storyboard instantiateViewControllerWithIdentifier:@"ListVC"];
-    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:@"PictureVC"];
+    self.backViewController = [storyboard instantiateViewControllerWithIdentifier:@"ListViewController"];
+    self.vanityViewController = [storyboard instantiateViewControllerWithIdentifier:@"VanityViewController"];
+    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:@"PictureViewController"];
+
+    [self addChildVC:self.backViewController];
+    [self addChildVC:self.vanityViewController];
+    [self addChildVC:self.frontViewController];
+
+    CGRect vanityFrame = self.vanityViewController.view.frame;
+    NSInteger vanityWidth = self.view.frame.size.width * 0.05f;
+    vanityFrame.size.width = vanityWidth;
+    vanityFrame.origin.x = self.view.frame.size.width;
+    self.vanityFrameOutView = vanityFrame;
+    vanityFrame.origin.x = self.view.frame.size.width - vanityWidth + 1.0f;
+    self.vanityFrameInView = vanityFrame;
     
-    [self addChildVC:self.backViewController withFrame:self.view.frame];
-    [self addChildVC:self.frontViewController withFrame:self.view.frame];
+    self.backViewController.view.frame = self.view.frame;
+    self.vanityViewController.view.frame = self.vanityFrameInView;
+    self.frontViewController.view.frame = self.view.frame;
 }
 
 - (void)removeChildVC:(UIViewController *)VC {
@@ -37,22 +56,23 @@
     [VC removeFromParentViewController];
 }
 
-
-- (void)addChildVC:(UIViewController *)viewController withFrame:(CGRect)frame {
+- (void)addChildVC:(UIViewController *)viewController {
     [self addChildViewController:viewController];
-    viewController.view.frame = frame;
     [self.view addSubview:viewController.view];
     [viewController didMoveToParentViewController:self];
 }
 
 - (void)swapFrontChildVC:(UIViewController *)oldViewController replaceWith:(UIViewController *)newViewController {
-    CGRect frame = oldViewController.view.frame;
+    CGRect frame = self.frontViewController.view.frame;
     [self removeChildVC:oldViewController];
     self.frontViewController = newViewController;
-    [self addChildVC:newViewController withFrame:frame];
+    self.frontViewController.view.frame = frame;
+    [self addChildVC:self.frontViewController];
 }
 
 - (void)presentFrontViewController:(UIViewController *)frontViewController {
+    self.vanityViewController.view.frame = self.vanityFrameOutView;
+    
     [UIView animateWithDuration:0.25f
                      animations:^{
                          CGRect frame = self.frontViewController.view.frame;
@@ -66,7 +86,6 @@
                          [self showHideSideView];
                      }
      ];
-    
 }
 
 - (void)showHideSideView {
@@ -76,18 +95,19 @@
           initialSpringVelocity:0.0f
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
+                         self.vanityViewController.view.frame = self.vanityFrameInView;
+                         
                          CGRect frame = self.view.frame;
                          
-                         if (self.isRight)
-                             {
+                         if (self.isRight) {
                              frame.origin.x = 0.0f;
-                         } else
-                             {
-                             frame.origin.x = frame.size.width * 0.9f;
+                         } else {
+                             frame.origin.x = frame.size.width * self.sideViewWidthPercent;
                          }
+                         
                          self.frontViewController.view.frame = frame;
                      }
-                     completion:nil
+                     completion:^(BOOL finished){ }
      ];
     
     self.isRight = !self.isRight;

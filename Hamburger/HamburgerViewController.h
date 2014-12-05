@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIViewController *backViewController;
 @property (strong, nonatomic) UIViewController *frontViewController;
+@property (strong, nonatomic) UIViewController *vanityViewController;
 
 - (void)presentFrontViewController:(UIViewController *)frontViewController;
 
