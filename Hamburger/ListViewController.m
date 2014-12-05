@@ -11,7 +11,7 @@
 @interface ListViewController ()
 
 @property (strong, nonatomic) NSArray *rowLabels;
-@property (strong, nonatomic) NSArray *vcNames;
+@property (strong, nonatomic) NSArray *viewControllerNames;
 
 @end
 
@@ -21,7 +21,7 @@
     self.hamburgerViewController = (HamburgerViewController *)self.parentViewController;
 
     self.rowLabels = @[@"Pictures", @"Fizz Buzz"];
-    self.vcNames = @[@"PictureViewController", @"FizzViewController"];
+    self.viewControllerNames = @[@"PictureViewController", @"FizzViewController"];
 }
 
 #pragma mark - UITableViewController
@@ -45,9 +45,14 @@
     NSInteger row = indexPath.row;
     
     UIStoryboard *storyboard = [self storyboard];
-    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:self.vcNames[row]];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:self.viewControllerNames[row]];
 
-    [self.hamburgerViewController presentFrontViewController:viewController];
+    if ([self.hamburgerViewController.currentFrontView isEqualToString:self.viewControllerNames[row]]) {
+        [self.hamburgerViewController showHideSideView];
+    } else {
+        self.hamburgerViewController.currentFrontView = self.viewControllerNames[row];
+        [self.hamburgerViewController presentFrontViewController:viewController];
+    }
 }
 
 @end

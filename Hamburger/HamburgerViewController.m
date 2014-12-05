@@ -12,6 +12,7 @@
 @interface HamburgerViewController ()
 
 @property (assign, nonatomic) BOOL isRight;
+
 @property (assign, nonatomic) CGRect vanityFrameInView;
 @property (assign, nonatomic) CGRect vanityFrameOutView;
 
@@ -31,7 +32,9 @@
     
     self.backViewController = [storyboard instantiateViewControllerWithIdentifier:@"ListViewController"];
     self.vanityViewController = [storyboard instantiateViewControllerWithIdentifier:@"VanityViewController"];
-    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:@"PictureViewController"];
+    
+    self.currentFrontView = @"PictureViewController";
+    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:self.currentFrontView];
 
     [self addChildVC:self.backViewController];
     [self addChildVC:self.vanityViewController];
