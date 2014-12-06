@@ -53,6 +53,18 @@
     self.frontViewController.view.frame = self.view.frame;
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    CGRect vanityFrame = self.vanityViewController.view.frame;
+    NSInteger vanityWidth = self.view.frame.size.width * 0.05f;
+    vanityFrame.size.width = vanityWidth;
+    vanityFrame.origin.x = self.view.frame.size.width;
+    self.vanityFrameOutView = vanityFrame;
+    vanityFrame.origin.x = self.view.frame.size.width - vanityWidth + 1.0f;
+    self.vanityFrameInView = vanityFrame;
+}
+
+# pragma mark - Private methods
+
 - (void)removeChildVC:(UIViewController *)VC {
     [VC willMoveToParentViewController:nil];
     [VC.view removeFromSuperview];
