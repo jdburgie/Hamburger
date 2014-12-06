@@ -14,8 +14,6 @@
 @property (strong, nonatomic) UIViewController *frontViewController;
 @property (strong, nonatomic) UIViewController *vanityViewController;
 
-@property (copy, nonatomic) NSString *currentFrontView;
-
 - (void)showHideSideView;
 - (void)presentFrontViewController:(UIViewController *)frontViewController;
 

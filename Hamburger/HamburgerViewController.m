@@ -33,8 +33,7 @@
     self.backViewController = [storyboard instantiateViewControllerWithIdentifier:@"ListViewController"];
     self.vanityViewController = [storyboard instantiateViewControllerWithIdentifier:@"VanityViewController"];
     
-    self.currentFrontView = @"PictureViewController";
-    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:self.currentFrontView];
+    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:@"PictureViewController"];
 
     [self addChildVC:self.backViewController];
     [self addChildVC:self.vanityViewController];
