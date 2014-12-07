@@ -23,17 +23,7 @@
     self.isRight = NO;
     self.sideViewWidthPercent = 0.5f;
 
-    self.vanityViewController = [[UIViewController alloc] init];
-    CGRect vanityFrame = self.view.frame;
-    NSInteger vanityWidth = self.view.frame.size.width * 0.05f;
-    vanityFrame.size.width = vanityWidth;
-    vanityFrame.origin.x = self.view.frame.size.width;
-    self.vanityFrameOutView = vanityFrame;
-    vanityFrame.origin.x = self.view.frame.size.width - vanityWidth + 1.0f;
-    self.vanityFrameInView = vanityFrame;
-    
     self.backViewController.view.frame = self.view.frame;
-    self.vanityViewController.view.frame = self.vanityFrameInView;
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
