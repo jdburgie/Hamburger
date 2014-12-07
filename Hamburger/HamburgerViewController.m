@@ -23,7 +23,18 @@
     self.isRight = NO;
     self.sideViewWidthPercent = 0.5f;
 
-    self.backViewController.view.frame = self.view.frame;
+    self.vanityViewController = [[UIViewController alloc] init];
+    CGRect vanityFrame = self.view.frame;
+    NSInteger vanityWidth = self.view.frame.size.width * 0.05f;
+    vanityFrame.size.width = vanityWidth;
+    vanityFrame.origin.x = self.view.frame.size.width;
+    self.vanityFrameOutView = vanityFrame;
+    vanityFrame.origin.x = self.view.frame.size.width - vanityWidth + 1.0f;
+    self.vanityFrameInView = vanityFrame;
+    
+    self.vanityViewController.view.frame = self.vanityFrameInView;
+    
+    [self addChildVC:self.vanityViewController];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -40,7 +51,18 @@
 
 - (void)addChildVC:(UIViewController *)viewController {
     [self addChildViewController:viewController];
-    [self.view addSubview:viewController.view];
+    
+    NSInteger index;
+    if ([self.backViewController class] == [viewController class]) {
+        index = 0;
+    } else if ([self.vanityViewController class] == [viewController class]) {
+        index = 1;
+    } else if ([self.frontViewController class] == [viewController class]) {
+        index = 2;
+    }
+
+    [self.view insertSubview:viewController.view atIndex:index];
+
     [viewController didMoveToParentViewController:self];
 }
 
