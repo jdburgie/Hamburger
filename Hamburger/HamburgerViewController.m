@@ -28,11 +28,11 @@
     NSInteger vanityWidth = self.view.frame.size.width * 0.05f;
     vanityFrame.size.width = vanityWidth;
     vanityFrame.origin.x = self.view.frame.size.width;
-    self.vanityFrameOutView = vanityFrame;
+    self.vanityViewOutFrame = vanityFrame;
     vanityFrame.origin.x = self.view.frame.size.width - vanityWidth + 1.0f;
-    self.vanityFrameInView = vanityFrame;
+    self.vanityViewInFrame = vanityFrame;
     
-    self.vanityViewController.view.frame = self.vanityFrameInView;
+    self.vanityViewController.view.frame = self.vanityViewInFrame;
     
     [self addChildVC:self.vanityViewController];
 }
@@ -42,9 +42,9 @@
     NSInteger vanityWidth = self.view.frame.size.width * 0.05f;
     vanityFrame.size.width = vanityWidth;
     vanityFrame.origin.x = self.view.frame.size.width;
-    self.vanityFrameOutView = vanityFrame;
+    self.vanityViewOutFrame = vanityFrame;
     vanityFrame.origin.x = self.view.frame.size.width - vanityWidth + 1.0f;
-    self.vanityFrameInView = vanityFrame;
+    self.vanityViewInFrame = vanityFrame;
 }
 
 # pragma mark - Private methods
@@ -82,7 +82,7 @@
 }
 
 - (void)presentFrontViewController:(UIViewController *)frontViewController {
-    self.vanityViewController.view.frame = self.vanityFrameOutView;
+    self.vanityViewController.view.frame = self.vanityViewOutFrame;
     
     [UIView animateWithDuration:0.25f
                      animations:^{
@@ -106,7 +106,7 @@
           initialSpringVelocity:0.0f
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         self.vanityViewController.view.frame = self.vanityFrameInView;
+                         self.vanityViewController.view.frame = self.vanityViewInFrame;
                          
                          CGRect frame = self.view.frame;
                          

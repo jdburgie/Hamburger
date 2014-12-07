@@ -11,11 +11,11 @@
 @interface HamburgerViewController : UIViewController
 
 @property (strong, nonatomic) UIViewController *backViewController;
-@property (strong, nonatomic) UIViewController *frontViewController;
 @property (strong, nonatomic) UIViewController *vanityViewController;
+@property (strong, nonatomic) UIViewController *frontViewController;
 
-@property (assign, nonatomic) CGRect vanityFrameInView;
-@property (assign, nonatomic) CGRect vanityFrameOutView;
+@property (assign, nonatomic) CGRect vanityViewInFrame;
+@property (assign, nonatomic) CGRect vanityViewOutFrame;
 
 @property (assign, nonatomic) CGFloat sideViewWidthPercent;
 
