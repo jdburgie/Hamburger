@@ -46,7 +46,7 @@
     
     UIStoryboard *storyboard = [self storyboard];
     UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:self.viewControllerNames[row]];
-
+    
     if ([self.hamburgerViewController.frontViewController class] == [viewController class]) {
         [self.hamburgerViewController showHideSideView];
     } else {

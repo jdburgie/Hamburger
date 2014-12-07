@@ -13,11 +13,6 @@
 
 @property (assign, nonatomic) BOOL isRight;
 
-@property (assign, nonatomic) CGRect vanityFrameInView;
-@property (assign, nonatomic) CGRect vanityFrameOutView;
-
-@property (assign, nonatomic) CGFloat sideViewWidthPercent;
-
 @end
 
 @implementation HamburgerViewController
@@ -27,19 +22,9 @@
     
     self.isRight = NO;
     self.sideViewWidthPercent = 0.5f;
-    
-    UIStoryboard *storyboard = [self storyboard];
-    
-    self.backViewController = [storyboard instantiateViewControllerWithIdentifier:@"ListViewController"];
-    self.vanityViewController = [storyboard instantiateViewControllerWithIdentifier:@"VanityViewController"];
-    
-    self.frontViewController = [storyboard instantiateViewControllerWithIdentifier:@"PictureViewController"];
 
-    [self addChildVC:self.backViewController];
-    [self addChildVC:self.vanityViewController];
-    [self addChildVC:self.frontViewController];
-
-    CGRect vanityFrame = self.vanityViewController.view.frame;
+    self.vanityViewController = [[UIViewController alloc] init];
+    CGRect vanityFrame = self.view.frame;
     NSInteger vanityWidth = self.view.frame.size.width * 0.05f;
     vanityFrame.size.width = vanityWidth;
     vanityFrame.origin.x = self.view.frame.size.width;
@@ -49,7 +34,6 @@
     
     self.backViewController.view.frame = self.view.frame;
     self.vanityViewController.view.frame = self.vanityFrameInView;
-    self.frontViewController.view.frame = self.view.frame;
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -64,23 +48,24 @@
 
 # pragma mark - Private methods
 
-- (void)removeChildVC:(UIViewController *)VC {
-    [VC willMoveToParentViewController:nil];
-    [VC.view removeFromSuperview];
-    [VC removeFromParentViewController];
-}
-
 - (void)addChildVC:(UIViewController *)viewController {
     [self addChildViewController:viewController];
     [self.view addSubview:viewController.view];
     [viewController didMoveToParentViewController:self];
 }
 
-- (void)swapFrontChildVC:(UIViewController *)oldViewController replaceWith:(UIViewController *)newViewController {
+- (void)removeChildviewController:(UIViewController *)viewController {
+    [viewController willMoveToParentViewController:nil];
+    [viewController.view removeFromSuperview];
+    [viewController removeFromParentViewController];
+}
+
+- (void)swapFrontChildviewController:(UIViewController *)oldViewController replaceWith:(UIViewController *)newViewController {
     CGRect frame = self.frontViewController.view.frame;
-    [self removeChildVC:oldViewController];
+    [self removeChildviewController:oldViewController];
     self.frontViewController = newViewController;
     self.frontViewController.view.frame = frame;
+    [self.vanityViewController.view setBackgroundColor:self.frontViewController.view.backgroundColor];
     [self addChildVC:self.frontViewController];
 }
 
@@ -96,7 +81,7 @@
                          self.frontViewController.view.frame = frame;
                      }
                      completion:^(BOOL finished){
-                         [self swapFrontChildVC:self.frontViewController replaceWith:frontViewController];
+                         [self swapFrontChildviewController:self.frontViewController replaceWith:frontViewController];
                          [self showHideSideView];
                      }
      ];

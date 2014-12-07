@@ -8,7 +8,7 @@
         <!--Hamburger-->
         <scene sceneID="yvO-Qt-W0J">
             <objects>
-                <viewController title="Hamburger" id="pPL-hz-r16" customClass="HamburgerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HamburgerViewController" title="Hamburger" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pPL-hz-r16" customClass="HamburgerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lva-lZ-qOl"/>
                         <viewControllerLayoutGuide type="bottom" id="efq-Pb-d1d"/>
@@ -61,24 +61,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfX-og-qMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1179" y="1704"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="InY-tf-8RA">
-            <objects>
-                <viewController storyboardIdentifier="VanityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gOm-GX-Rt9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tfg-fU-qvO"/>
-                        <viewControllerLayoutGuide type="bottom" id="9mZ-Hy-9A1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="A3E-Z6-tKg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.45590199999999997" green="0.63612299999999999" blue="0.77347299999999997" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5fM-eW-RNz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1795" y="1046"/>
         </scene>
         <!--Fizz View Controller-->
         <scene sceneID="i1n-CD-bYt">

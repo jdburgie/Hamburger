@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HamburgerViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

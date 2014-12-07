@@ -14,8 +14,16 @@
 @property (strong, nonatomic) UIViewController *frontViewController;
 @property (strong, nonatomic) UIViewController *vanityViewController;
 
-- (void)showHideSideView;
+@property (assign, nonatomic) CGRect vanityFrameInView;
+@property (assign, nonatomic) CGRect vanityFrameOutView;
+
+@property (assign, nonatomic) CGFloat sideViewWidthPercent;
+
+- (void)addChildVC:(UIViewController *)viewController;
+- (void)removeChildviewController:(UIViewController *)viewController;
 - (void)presentFrontViewController:(UIViewController *)frontViewController;
+
+- (void)showHideSideView;
 
 @end
 
