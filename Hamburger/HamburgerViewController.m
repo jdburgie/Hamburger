@@ -11,7 +11,7 @@
 
 @interface HamburgerViewController ()
 
-@property (assign, nonatomic) BOOL isRight;
+@property (assign, nonatomic, getter=isRight) BOOL right;
 
 @end
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.isRight = NO;
+    [self setRight:NO];
     self.sideViewWidthPercent = 0.5f;
 
     self.vanityViewController = [[UIViewController alloc] init];
@@ -53,12 +53,14 @@
     [self addChildViewController:viewController];
     
     NSInteger index;
+    NSArray *views = [self.view subviews];
+    
     if ([self.backViewController class] == [viewController class]) {
         index = 0;
     } else if ([self.vanityViewController class] == [viewController class]) {
         index = 1;
     } else if ([self.frontViewController class] == [viewController class]) {
-        index = 2;
+        index = views.count + 1;
     }
 
     [self.view insertSubview:viewController.view atIndex:index];
@@ -110,7 +112,7 @@
                          
                          CGRect frame = self.view.frame;
                          
-                         if (self.isRight) {
+                         if ([self isRight]) {
                              frame.origin.x = 0.0f;
                          } else {
                              frame.origin.x = frame.size.width * self.sideViewWidthPercent;
@@ -121,7 +123,7 @@
                      completion:^(BOOL finished){ }
      ];
     
-    self.isRight = !self.isRight;
+    [self setRight:![self isRight]];
 }
 
 - (IBAction)tappedHamburger:(id)sender {
