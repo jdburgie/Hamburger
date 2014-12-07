@@ -34,6 +34,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		58A6747A1A3501E10035A1E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58A674751A3501E00035A1E6 /* HamburgerLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58A6745B1A3501E00035A1E6;
+			remoteInfo = HamburgerLib;
+		};
+		58A6747C1A3501E10035A1E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58A674751A3501E00035A1E6 /* HamburgerLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58A674661A3501E00035A1E6;
+			remoteInfo = HamburgerLibTests;
+		};
 		58E00C9A1A2E1E0A00B05B72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 58E00C781A2E1E0A00B05B72 /* Project object */;
@@ -64,6 +78,7 @@
 		588E8EE01A30553B00A426A2 /* default76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default76.png; sourceTree = "<group>"; };
 		588E8EE11A30553B00A426A2 /* default60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default60@2x.png"; sourceTree = "<group>"; };
 		588E8EE21A30553B00A426A2 /* default76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default76@2x.png"; sourceTree = "<group>"; };
+		58A674751A3501E00035A1E6 /* HamburgerLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HamburgerLib.xcodeproj; path = HamburgerLib/HamburgerLib.xcodeproj; sourceTree = "<group>"; };
 		58D1060D1A2F841000DCF6B2 /* FizzViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FizzViewController.h; sourceTree = "<group>"; };
 		58D1060E1A2F841000DCF6B2 /* FizzViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FizzViewController.m; sourceTree = "<group>"; };
 		58E00C801A2E1E0A00B05B72 /* Hamburger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hamburger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +133,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		58A674761A3501E00035A1E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58A6747B1A3501E10035A1E6 /* libHamburgerLib.a */,
+				58A6747D1A3501E10035A1E6 /* HamburgerLibTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		58E00C771A2E1E0A00B05B72 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +163,7 @@
 		58E00C821A2E1E0A00B05B72 /* Hamburger */ = {
 			isa = PBXGroup;
 			children = (
+				58A674751A3501E00035A1E6 /* HamburgerLib.xcodeproj */,
 				58E00C871A2E1E0A00B05B72 /* AppDelegate.h */,
 				58E00C881A2E1E0A00B05B72 /* AppDelegate.m */,
 				58D1060D1A2F841000DCF6B2 /* FizzViewController.h */,
@@ -251,6 +276,12 @@
 			mainGroup = 58E00C771A2E1E0A00B05B72;
 			productRefGroup = 58E00C811A2E1E0A00B05B72 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 58A674761A3501E00035A1E6 /* Products */;
+					ProjectRef = 58A674751A3501E00035A1E6 /* HamburgerLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				58E00C7F1A2E1E0A00B05B72 /* Hamburger */,
@@ -258,6 +289,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		58A6747B1A3501E10035A1E6 /* libHamburgerLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libHamburgerLib.a;
+			remoteRef = 58A6747A1A3501E10035A1E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		58A6747D1A3501E10035A1E6 /* HamburgerLibTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HamburgerLibTests.xctest;
+			remoteRef = 58A6747C1A3501E10035A1E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		58E00C7E1A2E1E0A00B05B72 /* Resources */ = {
