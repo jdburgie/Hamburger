@@ -52,19 +52,24 @@
 - (void)addChildVC:(UIViewController *)viewController {
     [self addChildViewController:viewController];
     
-    NSInteger index;
+    NSInteger index = 0;
     NSArray *views = [self.view subviews];
     
-    if ([self.backViewController class] == [viewController class]) {
+    if ([self.backViewController class] == [viewController class])
+        {
         index = 0;
-    } else if ([self.vanityViewController class] == [viewController class]) {
+        }
+    else if ([self.vanityViewController class] == [viewController class])
+        {
         index = 1;
-    } else if ([self.frontViewController class] == [viewController class]) {
+        }
+    else if ([self.frontViewController class] == [viewController class])
+        {
         index = views.count + 1;
-    }
-
+        }
+    
     [self.view insertSubview:viewController.view atIndex:index];
-
+    
     [viewController didMoveToParentViewController:self];
 }
 
