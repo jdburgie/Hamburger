@@ -35,17 +35,29 @@
         modFive = i%5;
         
         NSString *fizzBuzzMsg;
-        if (modThree == 0)
+        if ((modThree == 0) && (modFive == 0))
             {
-            fizzBuzzMsg = [NSString stringWithFormat:@"%ld - Fizz", (long)i];
+            fizzBuzzMsg = [NSString stringWithFormat:@"\nBizzBuzz"];
             self.progressText.text = [self.progressText.text stringByAppendingString:fizzBuzzMsg];
             isFizzOrBuzz = YES;
             }
-        if (modFive == 0)
+        else if (modThree == 0)
             {
-            fizzBuzzMsg = [NSString stringWithFormat:@"%ld - Buzz", (long)i];
+            fizzBuzzMsg = [NSString stringWithFormat:@"\nBizz"];
             self.progressText.text = [self.progressText.text stringByAppendingString:fizzBuzzMsg];
             isFizzOrBuzz = YES;
+            }
+        else if (modFive == 0)
+            {
+            fizzBuzzMsg = [NSString stringWithFormat:@"\nBuzz"];
+            self.progressText.text = [self.progressText.text stringByAppendingString:fizzBuzzMsg];
+            isFizzOrBuzz = YES;
+            }
+        else
+            {
+            fizzBuzzMsg = [NSString stringWithFormat:@"%ld\n", (long)i];
+            self.progressText.text = [self.progressText.text stringByAppendingString:fizzBuzzMsg];
+            isFizzOrBuzz = NO;
             }
         
         long factorialFizzBuzz = 1;
@@ -57,18 +69,25 @@
                 factorialFizzBuzz *= j;
                 }
             NSString *factorialMsg;
-            factorialMsg = [NSString stringWithFormat:@"\n%ld factorial by iteration is %ld\n", (long)i, (long)factorialFizzBuzz];
+            factorialMsg = [NSString stringWithFormat:@"\n%ld factorial by iteration %ld, ", (long)i, (long)factorialFizzBuzz];
             
             self.progressText.text = [self.progressText.text stringByAppendingString:factorialMsg];
             
             factorialFizzBuzz = [self recurseFactorial:i];
             
-            factorialMsg = [NSString stringWithFormat:@"%ld factorial by recursion is %ld\n\n", (long)i, (long)factorialFizzBuzz];
+            factorialMsg = [NSString stringWithFormat:@" by recursion %ld\n\n", (long)factorialFizzBuzz];
             
             self.progressText.text = [self.progressText.text stringByAppendingString:factorialMsg];
-            
-            isFizzOrBuzz = NO;
             }
+        }
+    
+    if ([self.progressText.text isEqualToString:@""])
+        {
+        self.progressText.text = @"Nothing to count.";
+        }
+    else
+        {
+        self.progressText.text = [self.progressText.text stringByReplacingOccurrencesOfString:@"\n\n\n" withString:@"\n\n"];
         }
 }
 
@@ -94,18 +113,20 @@
     NSInteger number = [self.theNumber.text intValue];
     
     UIAlertView *alert;
-    if (number > 20)
+    NSString *alertTitle;
+    NSString *alertMsg;
+    if ((number > 20) || (number < 0))
         {
-        alert = [[UIAlertView alloc] initWithTitle:@"Too Big" message:@"Enter a number ≤ 20" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        alertTitle = number < 0 ? @"Too Negative" : @"Too Big";
+        alertMsg = number < 0 ? @"Enter a number ≥ 0" : @"Enter a number ≤ 20";
+        
+        alert = [[UIAlertView alloc] initWithTitle:alertTitle message:alertMsg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
-        } else if (number < 0)
-            {
-            alert = [[UIAlertView alloc] initWithTitle:@"Too Negative" message:@"Enter a number ≥ 0" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-            } else
-                {
-                [self fizzBuzzFactorial:number];
-                }
+        }
+    else
+        {
+        [self fizzBuzzFactorial:number];
+        }
     
 }
 
